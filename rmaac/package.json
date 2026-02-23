@@ -1,9 +1,0 @@
-{
-  "name": "ppgp",
-  "version": "0.1.0",
-  "homepage": ".", 
-  "dependencies": {
-    "bootstrap": "^5.3.2",
-    "framer-motion": "^12.27.2"
-  }
-}
