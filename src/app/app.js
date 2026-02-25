@@ -37,4 +37,14 @@ app.delete("/notes/:id",async (req,res)=>{
 
 })
 
+app.patch("/notes/:id",async (req,res)=>{
+    const data = req.params.id
+    const description = req.body.description
+    await noteModel.findOneAndUpdate({
+        _id:id   
+    },{
+        description:description
+    })
+})
+
 module.exports=app
