@@ -38,12 +38,17 @@ app.delete("/notes/:id",async (req,res)=>{
 })
 
 app.patch("/notes/:id",async (req,res)=>{
-    const data = req.params.id
+    const id = req.params.id
     const description = req.body.description
+    const title = req.body.title
     await noteModel.findOneAndUpdate({
         _id:id   
     },{
-        description:description
+        description:description,
+        title:title
+    })
+    res.status(200).json({
+        message:"Updated data"
     })
 })
 
